@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GENOVIX Dashboard</title>
+    <style>
+        html, body {
+            height: 100%;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background: #1761a0;
+            color: #fff;
+            padding: 0;
+        }
+        .navbar-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            height: 60px;
+        }
+        .logo {
+            font-size: 3em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+        }
+        .logo span {
+            color: #00bfff;
+        }
+        .user-actions {
+            display: flex;
+            gap: 8px;
+        }
+        .user-actions button {
+            padding: 6px 16px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .signin-btn {
+            background: #e6e6e6;
+            color: #222;
+        }
+        .register-btn {
+            background: #222;
+            color: #fff;
+        }
+        .menu-bar {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 0 16px;
+            height: 36px;
+            font-size: 0.98em;
+        }
+        .menu-links button {
+            background: none;
+            border: none;
+            color: #222;
+            margin-right: 18px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+        .menu-links button.active {
+            background: #e0f4ff;
+            color: #1761a0;
+            border: 1px solid #b6e0fc;
+        }
+        .last-updated {
+            margin-left: auto;
+            font-size: 0.93em;
+            color: #444;
+        }
+        .content-area {
+            flex: 1 1 auto;
+            overflow-y: auto;
+            min-height: 0;
+            padding: 0;
+            background: #fafcff;
+        }
+        @media (max-width: 700px) {
+            .navbar-content,
+            .menu-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                height: auto;
+            }
+            .user-actions {
+                margin-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-content">
+            <div class="logo">GEN<span>O</span>VIX</div>
+            <div class="user-actions">
+                <button class="signin-btn">My profile</button>
+                <button class="register-btn">Settings</button>
+            </div>
+        </div>
+    </div>
+    <div class="menu-bar">
+        <div class="menu-links">
+            <button class="active" onclick="showPage('home', this)">Home</button>
+            <button onclick="showPage('shortages', this)">Shortages</button>
+            <button onclick="showPage('equivalence', this)">Equivalence &amp; Exclusivity</button>
+            <button onclick="showPage('analytics', this)">Approval Analytics</button>
+        </div>
+<!--        <span class="last-updated">Last Updated on : 08 July 2025</span>-->
+            <span class="last-updated">Last Refresh : <span id="last-updated-time"></span></span>
+    </div>
+    <div class="content-area" id="mainContent"></div>
+    <script>
+        const now = new Date();
+        const options = { day: '2-digit', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' };
+        document.getElementById('last-updated-time').textContent = now.toLocaleString('en-GB', options);
+    </script>
+    <script>
+        const pages = {
+            home: `
+                <div class='tableauPlaceholder' id='viz1751141666621' style='position: relative; min-height:700px;'>
+                    <noscript>
+                        <a href='#'>
+                            <img alt='Home '
+                                src='https://public.tableau.com/static/images/Ta/Tableufulldashboard-extract/Home/1_rss.png'
+                                style='border: none' />
+                        </a>
+                    </noscript>
+                    <object class='tableauViz' style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                        <param name='embed_code_version' value='3' />
+                        <param name='site_root' value='' />
+                        <param name='name' value='Tableufulldashboard-extract/Home' />
+                        <param name='tabs' value='no' />
+                        <param name='toolbar' value='yes' />
+                        <param name='static_image' value='https://public.tableau.com/static/images/Ta/Tableufulldashboard-extract/Home/1.png' />
+                        <param name='animate_transition' value='yes' />
+                        <param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' />
+                        <param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' />
+                        <param name='language' value='en-US' />
+                        <param name='filter' value='publish=yes' />
+                    </object>
+                </div>
+                <script type='text/javascript'>
+                    var divElement = document.getElementById('viz1751141666621');
+                    var vizElement = divElement.getElementsByTagName('object')[0];
+                    vizElement.style.width='100%';
+                    vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                    var scriptElement = document.createElement('script');
+                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                <\/script>
+            `,
+            shortages: `
+                <div class='tableauPlaceholder' id='viz1751101466506' style='position: relative; min-height:700px;'>
+                    <noscript>
+                        <a href='#'>
+                            <img alt='Shortages '
+                                src='https://public.tableau.com/static/images/Ta/Tableufulldashboard-extract/Shortages/1_rss.png'
+                                style='border: none' />
+                        </a>
+                    </noscript>
+                    <object class='tableauViz' style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                        <param name='embed_code_version' value='3' />
+                        <param name='site_root' value='' />
+                        <param name='name' value='Tableufulldashboard-extract/Shortages' />
+                        <param name='tabs' value='no' />
+                        <param name='toolbar' value='yes' />
+                        <param name='static_image' value='https://public.tableau.com/static/images/Ta/Tableufulldashboard-extract/Shortages/1.png' />
+                        <param name='animate_transition' value='yes' />
+                        <param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' />
+                        <param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' />
+                        <param name='language' value='en-US' />
+                    </object>
+                </div>
+                <script type='text/javascript'>
+                    var divElement = document.getElementById('viz1751101466506');
+                    var vizElement = divElement.getElementsByTagName('object')[0];
+                    if ( divElement.offsetWidth > 800 ) {
+                        vizElement.style.width='100%';
+                        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                    } else if ( divElement.offsetWidth > 500 ) {
+                        vizElement.style.width='100%';
+                        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                    } else {
+                        vizElement.style.width='100%';
+                        vizElement.style.height='1477px';
+                    }
+                    var scriptElement = document.createElement('script');
+                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                <\/script>
+            `,
+            equivalence: `
+                <div class='tableauPlaceholder' id='viz1751018853108' style='position: relative; min-height:700px;'>
+                    <noscript>
+                        <a href='#'>
+                            <img alt='Therapeutic Equivalance &amp; Exclusivity '
+                                src='https://public.tableau.com/static/images/Ta/Tableufulldashboard-extract/EE/1_rss.png'
+                                style='border: none' />
+                        </a>
+                    </noscript>
+                    <object class='tableauViz' style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                        <param name='embed_code_version' value='3' />
+                        <param name='site_root' value='' />
+                        <param name='name' value='Tableufulldashboard-extract/EE' />
+                        <param name='tabs' value='no' />
+                        <param name='toolbar' value='yes' />
+                        <param name='static_image' value='https://public.tableau.com/static/images/Ta/Tableufulldashboard-extract/EE/1.png' />
+                        <param name='animate_transition' value='yes' />
+                        <param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' />
+                        <param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' />
+                        <param name='language' value='en-US' />
+                        <param name='filter' value='publish=yes' />
+                    </object>
+                </div>
+                <script type='text/javascript'>
+                    var divElement = document.getElementById('viz1751018853108');
+                    var vizElement = divElement.getElementsByTagName('object')[0];
+                    if ( divElement.offsetWidth > 800 ) {
+                        vizElement.style.width='100%';
+                        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                    } else if ( divElement.offsetWidth > 500 ) {
+                        vizElement.style.width='100%';
+                        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                    } else {
+                        vizElement.style.width='100%';
+                        vizElement.style.height='1177px';
+                    }
+                    var scriptElement = document.createElement('script');
+                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                <\/script>
+            `,
+            analytics: `
+                <div class='tableauPlaceholder' id='viz1751017809078' style='position: relative; min-height:700px;'>
+                    <noscript>
+                        <a href='#'>
+                            <img alt='Approval Anlysis '
+                                src='https://public.tableau.com/static/images/Ta/Tableufulldashboard-extract/Approvalanalysis/1_rss.png'
+                                style='border: none' />
+                        </a>
+                    </noscript>
+                    <object class='tableauViz' style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                        <param name='embed_code_version' value='3' />
+                        <param name='site_root' value='' />
+                        <param name='name' value='Tableufulldashboard-extract/Approvalanalysis' />
+                        <param name='tabs' value='no' />
+                        <param name='toolbar' value='yes' />
+                        <param name='static_image' value='https://public.tableau.com/static/images/Ta/Tableufulldashboard-extract/Approvalanalysis/1.png' />
+                        <param name='animate_transition' value='yes' />
+                        <param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' />
+                        <param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' />
+                        <param name='language' value='en-US' />
+                    </object>
+                </div>
+                <script type='text/javascript'>
+                    var divElement = document.getElementById('viz1751017809078');
+                    var vizElement = divElement.getElementsByTagName('object')[0];
+                    if ( divElement.offsetWidth > 800 ) {
+                        vizElement.style.width='100%';
+                        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                    } else if ( divElement.offsetWidth > 500 ) {
+                        vizElement.style.width='100%';
+                        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                    } else {
+                        vizElement.style.width='100%';
+                        vizElement.style.height='1527px';
+                    }
+                    var scriptElement = document.createElement('script');
+                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                <\/script>
+            `
+        };
+
+        function showPage(page, btn) {
+            document.getElementById('mainContent').innerHTML = pages[page];
+            document.querySelectorAll('.menu-links button').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Re-execute Tableau embed scripts if needed
+            if (['home', 'shortages', 'equivalence', 'analytics'].includes(page)) {
+                setTimeout(() => {
+                    var scripts = document.querySelectorAll('#mainContent script');
+                    scripts.forEach(oldScript => {
+                        var newScript = document.createElement('script');
+                        if (oldScript.type) newScript.type = oldScript.type;
+                        if (oldScript.src) newScript.src = oldScript.src;
+                        newScript.text = oldScript.text;
+                        oldScript.parentNode.replaceChild(newScript, oldScript);
+                    });
+                }, 10);
+            }
+        }
+
+        // Show home by default
+        showPage('home', document.querySelector('.menu-links button.active'));
+    </script>
+</body>
+</html>
