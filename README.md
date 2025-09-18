@@ -20,7 +20,7 @@ I enjoy turning complex datasets into actionable insights and building solutions
 
 ## 📂 Projects  
 
-### 1. [Genovix: Pharma Intelligence Dashboard]
+### 1. [Genovix: Pharma Intelligence Dashboard](https://github.com/preetijadhav029/business-analytics-portfolio/tree/main/Genovix)
 - Web-based platform to help generic drug manufacturers identify market opportunities from FDA data.  
 - Built ETL pipelines in Python, designed dashboards for drug shortages, approvals, and exclusivity trends.  
 - Applied ML models (Random Forest, ARIMA) to forecast approval timelines with **80%+ accuracy**.  
