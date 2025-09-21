@@ -27,7 +27,7 @@ I enjoy turning complex datasets into actionable insights and building solutions
 
 ---
 
-### 2. [Real Estate Sales Forecasting – Dublin]
+### 2. [Real Estate Sales Forecasting – Dublin](https://github.com/preetijadhav029/business-analytics-portfolio/tree/main/Real%20Estate)
 - Developed demand forecasting model using Random Forest (**76.26% accuracy**).  
 - Built **Power BI dashboards** to optimize sales planning → improved inventory planning by **15%**.  
 
