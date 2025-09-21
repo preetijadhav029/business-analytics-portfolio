@@ -33,7 +33,7 @@ I enjoy turning complex datasets into actionable insights and building solutions
 
 ---
 
-### 3. [Business Data Analysis for Ecovolt Energy]
+### 3. [Business Data Analysis for Ecovolt Energy](https://github.com/preetijadhav029/business-analytics-portfolio/tree/main/Ecovolt%20Energy)
 - Created **interactive Tableau dashboard** to track KPIs (CO₂ emissions, renewable energy adoption, dependency ratios).  
 - Insights influenced executives to allocate **€10M** into high-potential regions.  
 
