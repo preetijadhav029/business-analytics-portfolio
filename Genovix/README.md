@@ -30,4 +30,16 @@ Genovix is a pharma intelligence dashboard that helps generic drug manufacturers
 ## About
 This project was developed as part of advanced analytics coursework in an academic setting with collaborative input.
 
+## Dashboard Preview
 
+### Market Opportunity Dashboard
+![Dashboard](image1.png)
+
+### Drug Shortage Analysis
+![Dashboard](image2.png)
+
+### Forecasting & Trends
+![Dashboard](image3.png)
+
+### Analytics Overview
+![Dashboard](image4.png)
