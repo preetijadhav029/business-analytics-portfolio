@@ -21,7 +21,7 @@ Skilled in Power BI, Tableau, SQL, Excel, Python, and business-focused analytics
 
 # Featured Projects
 
-## 1. UPI Autopay Funnel & Failure Analysis Dashboard
+### 1. [UPI Autopay Funnel & Failure Analysis Dashboard](./UPI-Autopay-Dashboard)
 
 **Tools:** Power BI, SQL
 
@@ -31,7 +31,7 @@ Skilled in Power BI, Tableau, SQL, Excel, Python, and business-focused analytics
 
 ---
 
-## 2. Genovix Pharma Intelligence Platform
+### 2. [Genovix Pharma Intelligence Platform](./Genovix)
 
 **Tools:** Tableau, Python, SQL
 
@@ -41,7 +41,8 @@ Skilled in Power BI, Tableau, SQL, Excel, Python, and business-focused analytics
 
 ---
 
-## 3. Real Estate Sales Forecasting Dashboard
+### 3. [Real Estate Sales Forecasting – Dublin](./Real%20Estate)
+
 
 **Tools:** Power BI, Python
 
