@@ -22,4 +22,6 @@ Built an interactive Power BI dashboard analyzing 2,000+ synthetic UPI Autopay m
 - Smart retry logic could improve success rate from 42% to ~52%
 
 ## Dashboard Preview
-(Add screenshot here later)
+
+![Dashboard](UPI-Autopay-Dashboard/image.png)
+
