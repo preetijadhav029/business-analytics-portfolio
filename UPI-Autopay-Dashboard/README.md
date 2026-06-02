@@ -23,5 +23,5 @@ Built an interactive Power BI dashboard analyzing 2,000+ synthetic UPI Autopay m
 
 ## Dashboard Preview
 
-![Dashboard](UPI-Autopay-Dashboard/image.png)
+![Dashboard](image.png)
 
